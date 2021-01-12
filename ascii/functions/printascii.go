@@ -1,10 +1,14 @@
-package ascii
+package functions
 
-import "fmt"
+//var t *template.Template
 
-func PrintAscii(eachTextSplit string, asciiLines []string) {
+func PrintAscii(eachTextSplit string, asciiLines []string) string {
+
+	//var w http.ResponseWriter
 
 	characterLine := 0
+
+	var finalStr = ``
 
 	for everyLines := 0; everyLines < 8; everyLines++ { // Boucle permettant de mettre chaque ligne
 
@@ -16,6 +20,10 @@ func PrintAscii(eachTextSplit string, asciiLines []string) {
 			str = str + asciiLines[characterLine+everyLines] // concaténation de la ligne des différents caracères
 
 		}
-		fmt.Println(str)
+		// fmt.Println(str)
+
+		finalStr = finalStr + str + `<br>`
 	}
+
+	return finalStr
 }
