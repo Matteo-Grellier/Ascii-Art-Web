@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	asciifunc ".."
+	asciifunc "../functions"
 )
 
 func main() {
