@@ -25,6 +25,14 @@ func server(w http.ResponseWriter, req *http.Request) {
 
 func main() {
 	t = template.Must(template.ParseFiles("./index.html"))
+
+	// fs := http.FileServer(http.Dir("../style"))
+	// http.Handle("style", http.StripPrefix("style", fs))
+
+	http.Handle("style", http.FileServer(http.Dir("../style")))
+
 	http.HandleFunc("/", server) // "/" pour dire qu'on est dans ce fichier (je crois) et server car cest la fonction
+	//http.Handle("/", fs)
+	// http.Handle("/style/", http.StripPrefix("/style/", http.FileServer(http.Dir("../style"))))
 	http.ListenAndServe(":50000", nil)
 }
