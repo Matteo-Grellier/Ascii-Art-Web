@@ -24,7 +24,7 @@ func server(w http.ResponseWriter, req *http.Request) {
 }
 
 func main() {
-	t = template.Must(template.ParseFiles("./test.html"))
+	t = template.Must(template.ParseFiles("./index.html"))
 	http.HandleFunc("/", server) // "/" pour dire qu'on est dans ce fichier (je crois) et server car cest la fonction
 	http.ListenAndServe(":50000", nil)
 }
