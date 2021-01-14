@@ -8,12 +8,11 @@
 </head>
 <body>
 
-
     <section class="container">
         <div class="section">
             <div id="firstpart">
-                <h1>ASCII-ART-WEB</h1>
-                <h2>by LEGER Mathéo and GRELLIER Mattéo</h2>
+                <h1 class="title" id="firstmaintitle">ASCII-ART-WEB</h1>
+                <h2 class="title" id="firstsubtitle">by LEGER Mathéo and GRELLIER Mattéo</h2>
             </div>
         </div>
         <div class="section">
@@ -21,24 +20,28 @@
                 <h1 class="title" id="maintitle">ASCII-ART-WEB</h1>
                 <h2 class="title" id="subtitle">by LEGER Mathéo and GRELLIER Mattéo</h2>
             </div>
-        </div>    
+        </div>
+        <div class="section">
+            <form action="" method="post">
+
+                <label for="POST-text">Text :</label>
+                <input id="POST-text" type="text" name="text">
+                <label for="POST-select">Font :</label>
+                <select id="Post-select" name="select">
+                    <option selected>standard</option>
+                    <option>thinkertoy</option>
+                    <option>shadow</option>
+                </select>
+                <input type="submit" value="Envoyer">
+        
+            </form>
+        
+            <pre>{{.}}</pre>
+        </div>
+        
     </section>
 
-    <form action="" method="post">
-
-        <label for="POST-text">Text :</label>
-        <input id="POST-text" type="text" name="text">
-        <label for="POST-select">Font :</label>
-        <select id="Post-select" name="select">
-            <option selected>standard</option>
-            <option>thinkertoy</option>
-            <option>shadow</option>
-        </select>
-        <input type="submit" value="Envoyer">
-
-    </form>
-
-    <pre>{{.}}</pre>
+    
 
 </body>
 </html>
