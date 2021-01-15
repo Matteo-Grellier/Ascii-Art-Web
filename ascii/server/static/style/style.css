@@ -2,6 +2,7 @@ body {
     font-family: "Montserrat Medium";
     margin: 0;
     padding: 0;
+    background-image: url(static/images/background-test.gif);
 }
 
 .container {
@@ -32,7 +33,6 @@ body {
     margin: -10px;
     
 }
-
 
 .title {
     margin: 0;
