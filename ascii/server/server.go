@@ -16,6 +16,7 @@ func server(w http.ResponseWriter, req *http.Request) {
 		panic(err)
 	}
 
+	//Gestion des erreurs de chemin (avec Error 404)
 	if req.URL.Path != "/" && req.URL.Path != "/ascii-art" {
 		errorHandler(w, req, http.StatusNotFound)
 		return
@@ -35,7 +36,7 @@ func server(w http.ResponseWriter, req *http.Request) {
 func errorHandler(w http.ResponseWriter, r *http.Request, status int) {
 	w.WriteHeader(status)
 	if status == http.StatusNotFound {
-		fmt.Fprint(w, "error 404")
+		fmt.Fprint(w, "Error 404 : Page not found")
 	}
 }
 
