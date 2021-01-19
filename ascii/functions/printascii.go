@@ -10,7 +10,7 @@ func PrintAscii(eachTextSplit string, asciiLines []string) string {
 
 	var finalStr = ``
 
-	for everyLines := 0; everyLines < 8; everyLines++ { // Boucle permettant de mettre chaque ligne
+	for everyLines := 0; everyLines < 9; everyLines++ { // Boucle permettant de mettre chaque ligne
 
 		str := ""
 

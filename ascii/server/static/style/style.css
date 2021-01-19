@@ -18,13 +18,13 @@ body {
 } */
 
 
-#firstpart{
-    /* background-color: #282828; */
-    /* width: 100%;
-    height: 100vh; */
-    /* margin: 0px;
+/* #firstpart{
+    background-color: #282828;
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
     margin-top: 50vh;
-    transform: translateY(-50%); */
+    transform: translateY(-50%);
     position: relative;
     z-index: 1;
 }
@@ -53,7 +53,38 @@ body {
     left: 50%;
     z-index: -100;
     transform: translate(-50%, -50%);
+} */
+
+#banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
+
+.forVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -100;
+}
+
+.forVideo::before {
+    position:absolute;
+    content :"";
+    height: 100%;
+    width: 100%;
+    z-index: -99;
+    background-color: #000000b0;
+}
+
 
 @media (min-aspect-ratio:16/9){
     .forVideo video{
@@ -106,23 +137,4 @@ body {
 #subtitle{
     font-size: 31px;
     margin-top: -25px;
-}
-
-.Page2{ 
-    font-size: 20px;
-    height: 1200px;
-}
-.IO{
-    margin-top: 20px;
-    text-align: center;
-}
-
-.Fonctionnement{    
-    text-align: center;
-
-}
-
-#Texte{
-    font-size: 20px;
-
 }
