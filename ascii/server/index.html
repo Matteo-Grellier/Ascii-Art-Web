@@ -3,28 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/style/style.css">
     <title>Ascii-Art-Web</title>
 </head>
 <body>
 
-    <h1 class="title" id="maintitle">ASCII-ART-WEB</h1>
-    <h2 class="title" id="subtitle">by LEGER Mathéo and GRELLIER Mattéo</h2>
+    <section class="container">
+        <div class="section">
+            <div id="firstpart">
+                <h1 class="title" id="firstmaintitle">ASCII-ART-WEB</h1>
+                <h2 class="title" id="firstsubtitle">by LEGER Mathéo and GRELLIER Mattéo</h2>
+               
+                
+            </div>
+             <div class="forVideo">
+                    <image id="testid" src="static/images/background-test.gif"></image>
+            </div>
+        </div>
+        <div class="section">
+            <div id="bannertitle">
+                <h1 class="title" id="maintitle">ASCII-ART-WEB</h1>
+                <h2 class="title" id="subtitle">by LEGER Mathéo and GRELLIER Mattéo</h2>
+            </div>
+        </div>
+        <div class="Fonctionnement">
+            <img src="static/images/Conversion.png" alt="">
+            <h1>FONCTIONNEMENT</h1>
+            <p id="Texte">Je m'appelle Matteo, je suis à Ynov.</p>  
+        </div>
+        <div class="IO">
+            <form action="" method="post">
 
-    <form action="" method="post">
+                <label for="POST-text">Put your text here :</label>
+                <br>
+                <input id="POST-text" type="text" name="text">
+                <br>
+                <label for="POST-select">Choose a font :</label>
+                <br>
+                <select id="Post-select" name="select">
+                    <option selected>standard</option>
+                    <option>thinkertoy</option>
+                    <option>shadow</option>
+                </select>
+                <br>
+                <input type="submit" value="Envoyer">
+                
+        
+            </form>
+        
+            <pre>{{.}}</pre>
+        </div>
+        <div class="Page2">
 
-        <label for="POST-text">Text :</label>
-        <input id="POST-text" type="text" name="text">
-        <label for="POST-select">Font :</label>
-        <select id="Post-select" name="select">
-            <option selected>standard</option>
-            <option>thinkertoy</option>
-            <option>shadow</option>
-        </select>
-        <input type="submit" value="Envoyer">
+            lol
+        </div>
+        
+    </section>
 
-    </form>
-
-    <pre>{{.}}</pre>
+    
 
 </body>
 </html>
