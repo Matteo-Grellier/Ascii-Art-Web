@@ -107,3 +107,22 @@ body {
     font-size: 31px;
     margin-top: -25px;
 }
+
+.Page2{ 
+    font-size: 20px;
+    height: 1200px;
+}
+.IO{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.Fonctionnement{    
+    text-align: center;
+
+}
+
+#Texte{
+    font-size: 20px;
+
+}
