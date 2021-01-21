@@ -1,51 +1,74 @@
 package main
 
 import (
-	"fmt"
 	"html/template"
+	"log"
 	"net/http"
 
 	asciifunc "../functions"
 )
 
 var t *template.Template
+var tErr *template.Template
 
 func server(w http.ResponseWriter, req *http.Request) {
-	err := req.ParseForm() //cette ligne est (je crois) indispensable.
+
+	err := req.ParseForm() //cette ligne est indispensable.
 	if err != nil {
-		panic(err)
+		error(w, req, 500)
 	}
 
 	//Gestion des erreurs de chemin (avec Error 404)
 	if req.URL.Path != "/" && req.URL.Path != "/ascii-art" {
-		errorHandler(w, req, http.StatusNotFound)
+		error(w, req, http.StatusNotFound)
+		return
+	}
+	//Gestion des erreurs de Request (avec Error 400)
+	if req.Method != "POST" && req.Method != "GET" {
+		error(w, req, 400)
 		return
 	}
 
 	formSelect := req.Form.Get("select")
 	formText := req.Form.Get("text")
+	var finalStr string
 
-	finalStr := asciifunc.Ascii(formText, formSelect)
+	if req.URL.Path != "/" {
+		finalStr = asciifunc.Ascii(formText, formSelect)
 
-	//fmt.Fprintf(w, "Test Fprintf")
+	}
 
 	t.Execute(w, template.HTML(finalStr))
 
+	//fmt.Fprintf(w, "Test Fprintf")
+
 }
 
-func errorHandler(w http.ResponseWriter, r *http.Request, status int) {
+func error(w http.ResponseWriter, r *http.Request, status int) {
 	w.WriteHeader(status)
 	if status == http.StatusNotFound {
-		fmt.Fprint(w, "Error 404 : Page not found")
+		//fmt.Fprint(w, "Error 404 : Page not found")
+		tErr.Execute(w, template.HTML(`<h1>Error 404 : Page not found...<h1>`))
+	}
+
+	if status == 400 {
+		tErr.Execute(w, template.HTML(`<h1>Error 400 : Bad Request...<h1>`))
+	}
+
+	if status == 500 {
+		tErr.Execute(w, template.HTML(`<h1>Error 500 : Internal Server Error...<h1>`))
 	}
 }
 
 func main() {
 	t = template.Must(template.ParseFiles("./index.html"))
+	tErr = template.Must(template.New("test").Parse("{{.}}"))
 
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static")))) // récupère tous les fichiers "externe" (comme le style.css)
 
 	http.HandleFunc("/", server) // "/" pour dire qu'on est dans ce chemin et server car cest la fonction
 
-	http.ListenAndServe(":50000", nil)
+	if err := http.ListenAndServe(":50000", nil); err != nil {
+		log.Fatal("ListenAndServe: ", err)
+	}
 }
