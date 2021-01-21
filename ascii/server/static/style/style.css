@@ -2,7 +2,7 @@ body {
     font-family: "Montserrat Medium";
     margin: 0;
     padding: 0;
-    background-color: grey;
+    background-color: rgb(231, 231, 231);
 }
 
 .Page2{
@@ -118,6 +118,24 @@ body {
 
 .IO{
     padding-bottom: 10px;
+}
+
+input, label, select {
+    padding:8px;
+    left:28px;
+    top:0px;
+    border-radius: 4px;
+    border: none;
+}
+
+input, select {
+    background-color: white;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+input:focus, select:focus {
+    background-color: #e0e0e0b0;
 }
 
 .Fonctionnement{
