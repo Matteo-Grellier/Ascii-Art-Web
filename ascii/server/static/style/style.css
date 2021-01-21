@@ -2,8 +2,12 @@ body {
     font-family: "Montserrat Medium";
     margin: 0;
     padding: 0;
+    background-color: grey;
 }
 
+.Page2{
+    text-align: center;
+}
 /* .container {
     position: relative;
     width: 100%;
@@ -109,18 +113,40 @@ body {
 }
 
 .Page2{
-
-    
     font-size: 20px;
     height: 1200px;
 }
 
 .IO{
-    text-align: center;
-
+    padding-bottom: 380px;
 }
 
 .Fonctionnement{
-    text-align: center;
+    
+
+}
+
+#Texte{
+    margin-block-start: -18px;
+}
+
+#POST-text{
+    margin-block-end: 15px;
+}
+
+.Fonc{
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+
+.ProposText{
+    display: flex;
+    align-items: flex-end;
+    color: red;
+}
+
+.Propos{
+    
 
 }

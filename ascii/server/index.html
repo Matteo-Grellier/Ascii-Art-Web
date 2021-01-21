@@ -26,37 +26,44 @@
                 <h2 class="title" id="subtitle">by LEGER Mathéo and GRELLIER Mattéo</h2>
             </div>
         </div>
-        <div class="Fonctionnement">
-            <img src="static/images/Conversion.png" alt="">
-            <h1>FONCTIONNEMENT</h1>
-            <p id="Texte">Je m'appelle Matteo, je suis à Ynov.</p>  
-        </div>
-        <div class="IO">
-            <form action="" method="post">
-
-                <label for="POST-text">Put your text here :</label>
-                <br>
-                <input id="POST-text" type="text" name="text">
-                <br>
-                <label for="POST-select">Choose a font :</label>
-                <br>
-                <select id="Post-select" name="select">
-                    <option selected>standard</option>
-                    <option>thinkertoy</option>
-                    <option>shadow</option>
-                </select>
-                <br>
-                <input type="submit" value="Envoyer">
-                
-        
-            </form>
-        
-            <pre>{{.}}</pre>
-        </div>
         <div class="Page2">
-
-            lol
+            <div class="Fonctionnement">
+                <img src="static/images/Conversion.png" alt="">
+                <div class="Fonc">
+                    <h1>FONCTIONNEMENT</h1>
+                    <p id="Texte">Ce programme permet d'écrire un mot ou phrase et de 
+                    <br>pouvoir convertir l'entrée en Ascii-Art et l'afficher sur la page. </p>
+                </div>
+                  
+            </div>
+            <div class="IO">
+                <form action="" method="post">
+    
+                    <label for="POST-text">Put your text here :</label>
+                    <br>
+                    <input id="POST-text" type="text" name="text">
+                    <br>
+                    <label for="POST-select">Choose a font :</label>
+                    <br>
+                    <select id="Post-select" name="select">
+                        <option selected>standard</option>
+                        <option>thinkertoy</option>
+                        <option>shadow</option>
+                    </select>
+                    <br>
+                    <input type="submit" value="Envoyer">
+                </div>
+                <pre>{{.}}</pre>
+                </div>
+            
+                </form>
+    
         </div>
+        <div class="Propos">
+            <p class="ProposText">
+                TEST
+            </p>
+        
         
     </section>
 
