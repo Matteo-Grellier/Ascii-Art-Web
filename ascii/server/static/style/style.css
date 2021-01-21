@@ -4,6 +4,7 @@ html {
 
 body {
     font-family: "Montserrat Light";
+    color: rgb(36, 36, 36);
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -11,6 +12,11 @@ body {
     transform-style: preserve-3d;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.borderline {
+    border-top-width: 1px;
+    border-color:rgb(36, 36, 36);
 }
 
 .parallax {
@@ -44,6 +50,12 @@ body {
 
 }
 
+#firstpart {
+    
+    margin-top: 110px;
+    width: 50%;
+    height: 50%;
+}
 
 /* .container {
     position: relative;
@@ -137,9 +149,18 @@ body {
     margin-top: -25px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
 }
 
-#maintitle{
+#firsttext{
+    text-align: justify;
+    color:rgb(233, 233, 233);
+    font-size: 22px;
+    margin-left: 160px;
+    margin-right: 160px;
+}
+
+/* #maintitle{
     font-size: 80px;
     margin-bottom: -10px;
 }
@@ -147,7 +168,7 @@ body {
 #subtitle{
     font-size: 31px;
     margin-top: -25px;
-}
+} */
 
 /* .Page2{
     font-size: 20px;
@@ -158,27 +179,82 @@ body {
     padding-bottom: 10px;
 }
 
+.IO h1{
+    font-size: 50px;
+    font-family: "Montserrat";
+}
+
+.IO img{
+    height: 320px;
+    width: 320px;
+    margin-bottom: -115px;
+}
+
 input, label, select {
+    font-family: "Montserrat Light";
+    font-size: 20px;
     padding:8px;
     left:28px;
     top:0px;
-    border-radius: 4px;
-    border: none;
+}
+
+input:hover, select:hover {
+    font-size: 22px;
 }
 
 input, select {
     background-color: white;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
 
 input:focus, select:focus {
     background-color: #e0e0e0b0;
 }
 
-.Fonctionnement{
-    
+select {
+    appearance: none;
+    text-align: center;
+}
 
+
+input[type="submit"]{
+    font-family: "Montserrat Medium";
+    background-color:rgb(24, 24, 24);
+    color: #e0e0e0b0;
+}
+
+input[type="submit"]:hover{
+    background-color: #e0e0e0b0;
+    color:rgb(24, 24, 24);
+}
+
+
+.Fonctionnement{
+    font-size: 22px;
+    display: flex;
+    width: 47%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Fonctionnement h1{
+    font-family: "Montserrat";
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.Fonctionnement img{
+    height: 300px;
+    width: 300px;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+
+.foncText {
+    text-align: justify;
 }
 
 #Texte{
@@ -193,19 +269,3 @@ input:focus, select:focus {
     margin-top: 100px;
     margin-bottom: 100px;
 } */
-
-.Fonctionnement img{
-    height: 300px;
-    width: 300px;
-}
-
-.ProposText{
-    display: flex;
-    align-items: flex-end;
-    color: red;
-}
-
-.Propos{
-    
-
-}

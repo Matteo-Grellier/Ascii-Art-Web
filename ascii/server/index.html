@@ -9,40 +9,42 @@
 <body>
 
     <header class="parallax">
-        <div class="section">
             <div id="firstpart">
                 <h1 class="title" id="firstmaintitle">ASCII-ART-WEB</h1>
                 <h2 class="title" id="firstsubtitle">by LEGER Mathéo and GRELLIER Mattéo</h2>
-
+                <p id="firsttext">Ascii-art-web consiste à créer et exécuter un serveur, 
+                    dans lequel il sera possible d'utiliser une version Web GUI (interface utilisateur graphique) 
+                    de votre dernier projet, ascii-art.</p>
+                <p id="firsttext">Ascii-art-web est un projet dans le cadre d'un module Ytrack.</p>
             </div>
-        </div>
     </header>
     <section class="regular">
-        <div class="Fonctionnement">
-            <img src="static/images/Conversion.png" alt="">
-            <div class="Fonc">
-                <h1>FONCTIONNEMENT</h1>
-                    <p id="Texte">Ce programme permet d'écrire un mot ou phrase et de 
-                <br>pouvoir convertir l'entrée en Ascii-Art et l'afficher sur la page. </p>
+        <div class="Fonctionnement borderline">
+            <div class="foncPic">
+                <img src="static/images/gear.png">
+            </div>
+            <div class="foncText">
+                <h1>Fonctionnement</h1>
+                    <p id="Texte">Ce programme permet d'écrire un mot ou phrase et de pouvoir convertir l'entrée en Ascii-Art et l'afficher sur la page.</p>
+                    <p>Il est important de savoir qu'il n'est <b>pas possible</b> d'écrire des <b>mots avec accents</b> !</p>
+                    <p>Vous avez le choix entre 3 styles de police d'écriture : <b>standard</b>, <b>thinkertoy</b> et <b>shadow</b>. À vous de choisir !</p>
             </div>
                   
         </div>
-        <div class="IO">
+        <div class="IO borderline">
+            <img src="static/images/Conversion.png" alt="">
+            <h1>Convertisseur</h1>
             <form action="/ascii-art" method="post">
-    
-                <label for="POST-text">Put your text here :</label>
-                <br>
-                <input id="POST-text" type="text" name="text">
-                <br>
-                <label for="POST-select">Choose a font :</label>
-                <br>
+                <label for="POST-text">Votre texte :</label>
+                <input id="POST-text" type="text" name="text" placeholder="Entrez votre texte ici...">
+                <label for="POST-select">Police d'écriture :</label>
                 <select id="POST-select" name="select">
                     <option selected>standard</option>
                     <option>thinkertoy</option>
                     <option>shadow</option>
                 </select>
                 <br>
-                <input type="submit" value="Envoyer">
+                <input type="submit" value="CONVERTIR">
                 
                 <div>
                      <pre>{{.}}</pre>
@@ -51,11 +53,7 @@
                 </form>
             </div>   
         </div>
-        <div class="Propos">
-            <p class="ProposText">
-                TEST
-            </p>
-        </section>
+    </section>
 
     
 
