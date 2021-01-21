@@ -12,6 +12,7 @@ body {
     transform-style: preserve-3d;
     overflow-x: hidden;
     overflow-y: auto;
+    
 }
 
 .borderline {
@@ -26,6 +27,7 @@ body {
 }
 
 .parallax::before {
+    filter: blur(12px);
     content:"";
     width: 100vw;
     height: 100vh;
@@ -35,7 +37,7 @@ body {
     filter: blur(12px);
     background-size: cover;
     position: absolute;
-    z-index: -2;
+    z-index: -1;
     transform: translateZ(-1px) scale(3);
 }
 
