@@ -8,47 +8,45 @@
 </head>
 <body>
 
-    <section class="container">
+    <header class="parallax">
         <div class="section">
             <div id="firstpart">
                 <h1 class="title" id="firstmaintitle">ASCII-ART-WEB</h1>
                 <h2 class="title" id="firstsubtitle">by LEGER Mathéo and GRELLIER Mattéo</h2>
 
             </div>
-            <div class="forVideo">
-                    <image id="testid" src="static/images/background-test.gif"></image>
-            </div>
         </div>
-        <div class="Page2">
-            <div class="Fonctionnement">
-                <img src="static/images/Conversion.png" alt="">
-                <div class="Fonc">
-                    <h1>FONCTIONNEMENT</h1>
+    </header>
+    <section class="regular">
+        <div class="Fonctionnement">
+            <img src="static/images/Conversion.png" alt="">
+            <div class="Fonc">
+                <h1>FONCTIONNEMENT</h1>
                     <p id="Texte">Ce programme permet d'écrire un mot ou phrase et de 
-                    <br>pouvoir convertir l'entrée en Ascii-Art et l'afficher sur la page. </p>
-                </div>
-                  
+                <br>pouvoir convertir l'entrée en Ascii-Art et l'afficher sur la page. </p>
             </div>
-            <div class="IO">
-                <form action="/ascii-art" method="post">
+                  
+        </div>
+        <div class="IO">
+            <form action="/ascii-art" method="post">
     
-                    <label for="POST-text">Put your text here :</label>
-                    <br>
-                    <input id="POST-text" type="text" name="text">
-                    <br>
-                    <label for="POST-select">Choose a font :</label>
-                    <br>
-                    <select id="POST-select" name="select">
-                        <option selected>standard</option>
-                        <option>thinkertoy</option>
-                        <option>shadow</option>
-                    </select>
-                    <br>
-                    <input type="submit" value="Envoyer">
+                <label for="POST-text">Put your text here :</label>
+                <br>
+                <input id="POST-text" type="text" name="text">
+                <br>
+                <label for="POST-select">Choose a font :</label>
+                <br>
+                <select id="POST-select" name="select">
+                    <option selected>standard</option>
+                    <option>thinkertoy</option>
+                    <option>shadow</option>
+                </select>
+                <br>
+                <input type="submit" value="Envoyer">
                 
-                    <div>
-                        <pre>{{.}}</pre>
-                    </div>
+                <div>
+                     <pre>{{.}}</pre>
+                </div>
             
                 </form>
             </div>   
@@ -57,9 +55,7 @@
             <p class="ProposText">
                 TEST
             </p>
-        
-        
-    </section>
+        </section>
 
     
 

@@ -1,13 +1,49 @@
-body {
-    font-family: "Montserrat Medium";
-    margin: 0;
-    padding: 0;
-    background-color: rgb(231, 231, 231);
+html {
+    overflow: hidden;
 }
 
-.Page2{
-    text-align: center;
+body {
+    font-family: "Montserrat Light";
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
+
+.parallax {
+    width: 100vw;
+    height: 100vh;
+    padding-top:20vh;
+}
+
+.parallax::before {
+    content:"";
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
+    background-image: url(../images/background-test.gif);
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    transform: translateZ(-1px) scale(2);
+}
+
+.regular {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    padding-top:20vh;   
+    background-color: rgb(233, 233, 233);
+    z-index: 2;
+    position: relative;
+
+}
+
+
 /* .container {
     position: relative;
     width: 100%;
@@ -22,18 +58,18 @@ body {
 } */
 
 
-#firstpart{
-    /* background-color: #282828; */
+/* #firstpart{
+    background-color: #282828; */
     /* width: 100%;
-    height: 100vh; */
-    /* margin: 0px;
+    height: 100vh;
+    margin: 0px;
     margin-top: 50vh;
-    transform: translateY(-50%); */
+    transform: translateY(-50%);
     position: relative;
     z-index: 1;
-}
+} */
 
-.forVideo {
+/* .forVideo {
     position: relative;
     height: 100vh;
     width: 100%;
@@ -57,7 +93,7 @@ body {
     left: 50%;
     z-index: -100;
     transform: translate(-50%, -50%);
-}
+} */
 
 @media (min-aspect-ratio:16/9){
     .forVideo video{
@@ -85,6 +121,7 @@ body {
     text-align: center;
     color: #e1e1e1;
     font-weight: lighter;
+    font-family: "Montserrat Medium";
 }
 
 #firstmaintitle{
