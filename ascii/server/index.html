@@ -13,17 +13,10 @@
             <div id="firstpart">
                 <h1 class="title" id="firstmaintitle">ASCII-ART-WEB</h1>
                 <h2 class="title" id="firstsubtitle">by LEGER Mathéo and GRELLIER Mattéo</h2>
-               
-                
+
             </div>
-             <div class="forVideo">
+            <div class="forVideo">
                     <image id="testid" src="static/images/background-test.gif"></image>
-            </div>
-        </div>
-        <div class="section">
-            <div id="bannertitle">
-                <h1 class="title" id="maintitle">ASCII-ART-WEB</h1>
-                <h2 class="title" id="subtitle">by LEGER Mathéo and GRELLIER Mattéo</h2>
             </div>
         </div>
         <div class="Page2">
@@ -37,7 +30,7 @@
                   
             </div>
             <div class="IO">
-                <form action="" method="post">
+                <form action="/ascii-art" method="post">
     
                     <label for="POST-text">Put your text here :</label>
                     <br>
@@ -45,20 +38,20 @@
                     <br>
                     <label for="POST-select">Choose a font :</label>
                     <br>
-                    <select id="Post-select" name="select">
+                    <select id="POST-select" name="select">
                         <option selected>standard</option>
                         <option>thinkertoy</option>
                         <option>shadow</option>
                     </select>
                     <br>
                     <input type="submit" value="Envoyer">
-                </div>
-                <div>
-                <pre>{{.}}</pre>
-                </div>
+                
+                    <div>
+                        <pre>{{.}}</pre>
+                    </div>
             
                 </form>
-    
+            </div>   
         </div>
         <div class="Propos">
             <p class="ProposText">

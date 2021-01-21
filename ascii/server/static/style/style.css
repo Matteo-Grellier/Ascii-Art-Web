@@ -73,12 +73,11 @@ body {
 }
 
 
-
-#bannertitle {
+/* #bannertitle {
     background-color: #282828;
     margin: 0px;
-    
-}
+    position: fixed;
+} */
 
 .title {
     margin: 0;
@@ -118,7 +117,7 @@ body {
 }
 
 .IO{
-    padding-bottom: 380px;
+    padding-bottom: 10px;
 }
 
 .Fonctionnement{
