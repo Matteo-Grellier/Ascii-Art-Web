@@ -39,6 +39,7 @@ body {
     position: absolute;
     z-index: -1;
     transform: translateZ(-1px) scale(3);
+    
 }
 
 .regular {
@@ -251,23 +252,22 @@ input[type="submit"]:hover{
 .Fonctionnement img{
     height: 300px;
     width: 300px;
-    margin-top: 50px;
-    margin-right: 50px;
+    margin-bottom: -70px;
+    margin-top: -70px;
 }
 
-.foncText {
-    text-align: justify;
+.Propos{
+    display: flex;
+    margin-top: 292px;
+    color: red;
+    height: 200px;
+    background-color: rgb(44,44,53); 
 }
 
-#Texte{
-    margin-block-start: -18px;
+.LienGitea{    
+    position: relative;
+    font-size: 20px;    
 }
-
-#POST-text{
-    margin-block-end: 15px;
+.LienYnov{
+    position: relative;
 }
-
-/* .Fonc{
-    margin-top: 100px;
-    margin-bottom: 100px;
-} */
