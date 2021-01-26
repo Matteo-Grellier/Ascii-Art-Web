@@ -60,6 +60,15 @@ body {
     height: 50%;
 }
 
+/* Un ptit peu de la triche pour le background donc a voir si ca fonctionne bien */
+.IO pre {
+    background-color: rgb(233, 233, 233);
+    margin-bottom:100px;
+}
+
+
+
+
 /* .container {
     position: relative;
     width: 100%;
