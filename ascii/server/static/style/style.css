@@ -269,11 +269,13 @@ input[type="submit"]:hover{
 }
 
 .LienGitea{    
+    padding-left: 20px;
     font-size: 20px;  
     text-align: start;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 .LienYnov{
+    padding-left: 20px;
     text-align: start;
 }
