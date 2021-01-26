@@ -25,18 +25,19 @@ body {
     padding-top:20vh;
 }
 
+
 .parallax::before {
     content:"";
     width: 100vw;
     height: 100vh;
     top:0;
     left: 0;
-    background-image: url(../images/background-test.gif);
+    background-image: url(../images/Background.gif);
     filter: blur(12px);
     background-size: cover;
     position: absolute;
     z-index: -2;
-    transform: translateZ(-1px) scale(3);
+    transform: translateZ(-1px) scale(2.5);
 }
 
 .regular {
