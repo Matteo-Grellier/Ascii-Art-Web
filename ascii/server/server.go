@@ -16,6 +16,7 @@ func server(w http.ResponseWriter, req *http.Request) {
 	err := req.ParseForm() //cette ligne est indispensable.
 	if err != nil {
 		error(w, req, 500)
+		return
 	}
 
 	//Gestion des erreurs de chemin (avec Error 404)
@@ -36,6 +37,11 @@ func server(w http.ResponseWriter, req *http.Request) {
 	if req.URL.Path != "/" {
 		finalStr = asciifunc.Ascii(formText, formSelect)
 
+	}
+
+	if finalStr == "" && req.URL.Path == "/ascii-art" {
+		error(w, req, 500)
+		return
 	}
 
 	t.Execute(w, template.HTML(finalStr))
