@@ -13,7 +13,7 @@ var tErr *template.Template
 
 func server(w http.ResponseWriter, req *http.Request) {
 
-	err := req.ParseForm() //cette ligne est indispensable.
+	err := req.ParseForm() //analyse le Formulaire et retourne une erreur (s'il y en a une)
 	if err != nil {
 		error(w, req, 500)
 		return
@@ -25,7 +25,13 @@ func server(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 	//Gestion des erreurs de Request (avec Error 400)
-	if req.Method != "POST" && req.Method != "GET" {
+	if req.Method != "POST" && req.URL.Path == "/ascii-art" {
+		error(w, req, 400)
+		return
+	} else if req.Method != "GET" && req.URL.Path == "/" {
+		error(w, req, 400)
+		return
+	} else if req.Method != "POST" && req.Method != "GET" {
 		error(w, req, 400)
 		return
 	}
@@ -39,6 +45,7 @@ func server(w http.ResponseWriter, req *http.Request) {
 
 	}
 
+	//Gestion des erreurs interne au serveur (avec les fonctions du programme ASCII-Art) (avec Error 500)
 	if finalStr == "" && req.URL.Path == "/ascii-art" {
 		error(w, req, 500)
 		return
