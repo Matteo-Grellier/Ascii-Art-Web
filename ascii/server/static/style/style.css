@@ -12,6 +12,7 @@ body {
     transform-style: preserve-3d;
     overflow-x: hidden;
     overflow-y: auto;
+    
 }
 
 .borderline {
@@ -27,6 +28,7 @@ body {
 
 
 .parallax::before {
+    filter: blur(12px);
     content:"";
     width: 100vw;
     height: 100vh;
@@ -259,23 +261,30 @@ input[type="submit"]:hover{
 .Fonctionnement img{
     height: 300px;
     width: 300px;
-    margin-top: 50px;
-    margin-right: 50px;
+    margin-bottom: -70px;
+    margin-top: -70px;
 }
 
-.foncText {
-    text-align: justify;
+.Propos{
+    position: relative;
+    color: white;
+    height: 200px;
+    background-color: rgb(44,44,53); 
 }
 
-#Texte{
-    margin-block-start: -18px;
+#Titre{
+    padding-top: 20px;
+    font-size: 35px;
 }
 
-#POST-text{
-    margin-block-end: 15px;
+.LienGitea{    
+    padding-left: 20px;
+    font-size: 20px;  
+    text-align: start;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-
-/* .Fonc{
-    margin-top: 100px;
-    margin-bottom: 100px;
-} */
+.LienYnov{
+    padding-left: 20px;
+    text-align: start;
+}
