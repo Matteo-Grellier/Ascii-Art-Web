@@ -280,21 +280,22 @@ input[type="submit"]:hover{
     color: white;
     height: 200px;
     background-color: rgb(44,44,53); 
-}
-
-#Titre{
-    padding-top: 20px;
-    font-size: 35px;
-}
-
-.LienGitea{    
     padding-left: 20px;
     font-size: 20px;  
     text-align: start;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.LienYnov{
-    padding-left: 20px;
-    text-align: start;
+
+.Propos a {
+    color: rgb(233, 233, 233);
 }
+
+#Titre h1{
+    font-family: "Montserrat";
+    padding-top: 20px;
+    font-size: 50px;
+    text-align: center;
+}
+
+
