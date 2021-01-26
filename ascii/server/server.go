@@ -77,7 +77,7 @@ func main() {
 	t = template.Must(template.ParseFiles("./index.html"))
 	tErr = template.Must(template.New("test").Parse("{{.}}"))
 
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static")))) // récupère tous les fichiers "externe" (comme le style.css)
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static")))) // récupère tous les fichiers "externe" dans "static" (comme le style.css)
 
 	http.HandleFunc("/", server) // "/" pour dire qu'on est dans ce chemin et server car cest la fonction
 
