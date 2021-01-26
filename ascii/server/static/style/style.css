@@ -257,17 +257,23 @@ input[type="submit"]:hover{
 }
 
 .Propos{
-    display: flex;
-    margin-top: 292px;
-    color: red;
+    position: relative;
+    color: white;
     height: 200px;
     background-color: rgb(44,44,53); 
 }
 
+#Titre{
+    padding-top: 20px;
+    font-size: 35px;
+}
+
 .LienGitea{    
-    position: relative;
-    font-size: 20px;    
+    font-size: 20px;  
+    text-align: start;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .LienYnov{
-    position: relative;
+    text-align: start;
 }
