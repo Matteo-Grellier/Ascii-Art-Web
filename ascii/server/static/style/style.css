@@ -12,7 +12,6 @@ body {
     transform-style: preserve-3d;
     overflow-x: hidden;
     overflow-y: auto;
-    
 }
 
 .borderline {
@@ -28,7 +27,6 @@ body {
 
 
 .parallax::before {
-    filter: blur(12px);
     content:"";
     width: 100vw;
     height: 100vh;
@@ -261,8 +259,20 @@ input[type="submit"]:hover{
 .Fonctionnement img{
     height: 300px;
     width: 300px;
-    margin-bottom: -70px;
-    margin-top: -70px;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+
+.foncText {
+    text-align: justify;
+}
+
+#Texte{
+    margin-block-start: -18px;
+}
+
+#POST-text{
+    margin-block-end: 15px;
 }
 
 .Propos{
