@@ -8,67 +8,67 @@
 </head>
 <body>
 
-    <section class="container">
-        <div class="section">
+    <form action="" method="post">
+
+    <header class="parallax">
             <div id="firstpart">
                 <h1 class="title" id="firstmaintitle">ASCII-ART-WEB</h1>
                 <h2 class="title" id="firstsubtitle">by LEGER Mathéo and GRELLIER Mattéo</h2>
-               
-                
+                <p id="firsttext">Ascii-art-web consiste à créer et exécuter un serveur, 
+                    dans lequel il sera possible d'utiliser une version Web GUI (interface utilisateur graphique) 
+                    de votre dernier projet, ascii-art.</p>
+                <p id="firsttext">Ascii-art-web est un projet dans le cadre d'un module Ytrack.</p>
             </div>
-             <div class="forVideo">
-                    <image id="testid" src="static/images/background-test.gif"></image>
+    </header>
+    <section class="regular">
+        <div class="Fonctionnement borderline">
+            <div class="foncPic">
+                <img src="static/images/gear.png">
             </div>
-        </div>
-        <div class="section">
-            <div id="bannertitle">
-                <h1 class="title" id="maintitle">ASCII-ART-WEB</h1>
-                <h2 class="title" id="subtitle">by LEGER Mathéo and GRELLIER Mattéo</h2>
+            <div class="foncText">
+                <h1>Fonctionnement</h1>
+                    <p id="Texte">Ce programme permet d'écrire un mot ou phrase et de pouvoir convertir l'entrée en Ascii-Art et l'afficher sur la page.</p>
+                    <p>Il est important de savoir qu'il n'est <b>pas possible</b> d'écrire des <b>mots avec accents</b> !</p>
+                    <p>Vous avez le choix entre 3 styles de police d'écriture : <b>standard</b>, <b>thinkertoy</b> et <b>shadow</b>. À vous de choisir !</p>
             </div>
-        </div>
-        <div class="Page2">
-            <div class="Fonctionnement">
-                <img src="static/images/Conversion.png" alt="">
-                <div class="Fonc">
-                    <h1>FONCTIONNEMENT</h1>
-                    <p id="Texte">Ce programme permet d'écrire un mot ou phrase et de 
-                    <br>pouvoir convertir l'entrée en Ascii-Art et l'afficher sur la page. </p>
-                </div>
                   
-            </div>
-            <div class="IO">
-                <form action="" method="post">
-    
-                    <label for="POST-text">Put your text here :</label>
-                    <br>
-                    <input id="POST-text" type="text" name="text">
-                    <br>
-                    <label for="POST-select">Choose a font :</label>
-                    <br>
-                    <select id="Post-select" name="select">
-                        <option selected>standard</option>
-                        <option>thinkertoy</option>
-                        <option>shadow</option>
-                    </select>
-                    <br>
-                    <input type="submit" value="Envoyer">
-                </div>
+        </div>
+        <div class="IO borderline">
+            <img src="static/images/Conversion.png" alt="">
+            <h1>Convertisseur</h1>
+            <form action="/ascii-art" method="post">
+                <label for="POST-text">Votre texte :</label>
+                <input id="POST-text" type="text" name="text" placeholder="Entrez votre texte ici...">
+                <label for="POST-select">Police d'écriture :</label>
+                <select id="POST-select" name="select">
+                    <option selected>standard</option>
+                    <option>thinkertoy</option>
+                    <option>shadow</option>
+                </select>
+                <br>
+                <input type="submit" value="CONVERTIR">
+                
                 <div>
-                <pre>{{.}}</pre>
+                     <pre>{{.}}</pre>
                 </div>
             
                 </form>
-    
+            </div>  
         </div>
         <div class="Propos">
-            <p class="ProposText">
-                TEST
-            </p>
-        
-        
+            <div id="Titre">A PROPOS</div>
+                <div class="LienGitea">
+                    Retrouvez le code source sur notre
+                    <a href="https://git.ytrack.learn.ynov.com/MLEGER/ascii-art-web.git">Gitea</a>
+                    </div>
+                
+                <div class="LienYnov">
+                    Ce site est un projet dans le cadre de la formation 
+                    <a href=" https://www.ynov.com/campus/nantes/">Ynov</a>
+                </div>
+        </div>
+            
     </section>
-
     
-
 </body>
 </html>

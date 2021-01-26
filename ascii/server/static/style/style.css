@@ -1,13 +1,65 @@
-body {
-    font-family: "Montserrat Medium";
-    margin: 0;
-    padding: 0;
-    background-color: grey;
+html {
+    overflow: hidden;
 }
 
-.Page2{
-    text-align: center;
+body {
+    font-family: "Montserrat Light";
+    color: rgb(36, 36, 36);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
 }
+
+.borderline {
+    border-top-width: 1px;
+    border-color:rgb(36, 36, 36);
+}
+
+.parallax {
+    width: 100vw;
+    height: 100vh;
+    padding-top:20vh;
+}
+
+.parallax::before {
+    filter: blur(12px);
+    content:"";
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
+    background-image: url(../images/background-test.gif);
+    filter: blur(12px);
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    transform: translateZ(-1px) scale(3);
+    
+}
+
+.regular {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    padding-top:20vh;   
+    background-color: rgb(233, 233, 233);
+    z-index: 2;
+    position: relative;
+
+}
+
+#firstpart {
+    
+    margin-top: 110px;
+    width: 50%;
+    height: 50%;
+}
+
 /* .container {
     position: relative;
     width: 100%;
@@ -22,18 +74,18 @@ body {
 } */
 
 
-#firstpart{
-    /* background-color: #282828; */
+/* #firstpart{
+    background-color: #282828; */
     /* width: 100%;
-    height: 100vh; */
-    /* margin: 0px;
+    height: 100vh;
+    margin: 0px;
     margin-top: 50vh;
-    transform: translateY(-50%); */
+    transform: translateY(-50%);
     position: relative;
     z-index: 1;
-}
+} */
 
-.forVideo {
+/* .forVideo {
     position: relative;
     height: 100vh;
     width: 100%;
@@ -57,7 +109,7 @@ body {
     left: 50%;
     z-index: -100;
     transform: translate(-50%, -50%);
-}
+} */
 
 @media (min-aspect-ratio:16/9){
     .forVideo video{
@@ -73,12 +125,11 @@ body {
 }
 
 
-
-#bannertitle {
+/* #bannertitle {
     background-color: #282828;
     margin: 0px;
-    
-}
+    position: fixed;
+} */
 
 .title {
     margin: 0;
@@ -86,6 +137,7 @@ body {
     text-align: center;
     color: #e1e1e1;
     font-weight: lighter;
+    font-family: "Montserrat Medium";
 }
 
 #firstmaintitle{
@@ -100,9 +152,18 @@ body {
     margin-top: -25px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
 }
 
-#maintitle{
+#firsttext{
+    text-align: justify;
+    color:rgb(233, 233, 233);
+    font-size: 22px;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+/* #maintitle{
     font-size: 80px;
     margin-bottom: -10px;
 }
@@ -110,43 +171,111 @@ body {
 #subtitle{
     font-size: 31px;
     margin-top: -25px;
-}
+} */
 
-.Page2{
+/* .Page2{
     font-size: 20px;
     height: 1200px;
-}
+} */
 
 .IO{
-    padding-bottom: 380px;
+    padding-bottom: 10px;
 }
+
+.IO h1{
+    font-size: 50px;
+    font-family: "Montserrat";
+}
+
+.IO img{
+    height: 320px;
+    width: 320px;
+    margin-bottom: -115px;
+}
+
+input, label, select {
+    font-family: "Montserrat Light";
+    font-size: 20px;
+    padding:8px;
+    left:28px;
+    top:0px;
+}
+
+input[type=submit]:hover {
+    font-size: 22px;
+}
+
+input, select {
+    background-color: white;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+input:focus, select:focus {
+    background-color: #e0e0e0b0;
+}
+
+select {
+    appearance: none;
+    text-align: center;
+}
+
+
+input[type="submit"]{
+    font-family: "Montserrat Medium";
+    background-color:rgb(24, 24, 24);
+    color: #e0e0e0b0;
+}
+
+input[type="submit"]:hover{
+    background-color: #e0e0e0b0;
+    color:rgb(24, 24, 24);
+}
+
 
 .Fonctionnement{
-    
-
-}
-
-#Texte{
-    margin-block-start: -18px;
-}
-
-#POST-text{
-    margin-block-end: 15px;
-}
-
-.Fonc{
-    margin-top: 100px;
-    margin-bottom: 100px;
-
-}
-
-.ProposText{
+    font-size: 22px;
     display: flex;
-    align-items: flex-end;
-    color: red;
+    width: 47%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Fonctionnement h1{
+    font-family: "Montserrat";
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.Fonctionnement img{
+    height: 300px;
+    width: 300px;
+    margin-bottom: -70px;
+    margin-top: -70px;
 }
 
 .Propos{
-    
+    position: relative;
+    color: white;
+    height: 200px;
+    background-color: rgb(44,44,53); 
+}
 
+#Titre{
+    padding-top: 20px;
+    font-size: 35px;
+}
+
+.LienGitea{    
+    padding-left: 20px;
+    font-size: 20px;  
+    text-align: start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.LienYnov{
+    padding-left: 20px;
+    text-align: start;
 }
