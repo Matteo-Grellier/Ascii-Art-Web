@@ -11,14 +11,14 @@ Ce site est aussi capable de gérer les erreurs éventuelles liées à :
 ## Authors 
 - **Mathéo LEGER** : 
                         - la création du serveur  
-                        - la liaison entre programme Ascii-Art et l'affichage sur le site web.
-                        - CSS
-                        - HTML
+                        - la liaison entre programme Ascii-Art et l'affichage sur le site web.  
+                        - CSS  
+                        - HTML  
 
 - **Matteo GRELLIER** : 
-                        - CSS
-                        - HTML
-                        - gestion de git pour le transfert de fichier.
+                        - CSS  
+                        - HTML  
+                        - gestion de git pour le transfert de fichier.  
 
 ## Usage : How to run
 Pour lancer le serveur et utiliser la page web il faut :
