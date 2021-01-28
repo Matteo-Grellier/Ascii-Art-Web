@@ -18,7 +18,7 @@ func Ascii(textToConvert string, banner string) string {
 	if banner == "standard" || banner == "shadow" || banner == "thinkertoy" {
 
 		nameOfFiles := banner + ".txt"
-		asciiLines = FilesToLines("../" + nameOfFiles) // Lecture / récupération des lignes du fichier avec les caractères en ascii-art
+		asciiLines = FilesToLines("../templates/" + nameOfFiles) // Lecture / récupération des lignes du fichier avec les caractères en ascii-art
 	} else {
 		asciiLines = FilesToLines("") // dans le cas où l'utilisateur entre une mauvais nom de fichier.
 	}

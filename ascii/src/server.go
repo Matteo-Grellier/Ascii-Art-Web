@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	asciifunc "../functions"
+	asciifunc "../templates/functions"
 )
 
 var t *template.Template
@@ -42,7 +42,6 @@ func server(w http.ResponseWriter, req *http.Request) {
 
 	if req.URL.Path != "/" {
 		finalStr = asciifunc.Ascii(formText, formSelect)
-
 	}
 
 	//Gestion des erreurs interne au serveur (avec les fonctions du programme ASCII-Art) (avec Error 500)
@@ -77,7 +76,8 @@ func main() {
 	t = template.Must(template.ParseFiles("./index.html"))
 	tErr = template.Must(template.New("test").Parse("{{.}}"))
 
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static")))) // récupère tous les fichiers "externe" dans "static" (comme le style.css)
+	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("../css")))) // récupère tous les fichiers "externe" dans "static" (comme le style.css)
+	http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir("../images"))))
 
 	http.HandleFunc("/", server) // "/" pour dire qu'on est dans ce chemin et server car cest la fonction
 
