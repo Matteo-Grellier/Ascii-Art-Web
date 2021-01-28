@@ -302,13 +302,11 @@ input[type="submit"]:hover{
     width: 200px;
     height: 200px;
     display: flex;
-    margin-right: -px;
-    margin-left: -80%;
 }   
 
 #logoYnov{
-    width: 10%;
-    height: 10%;
+    width: 178px;
+    height: 80px;
     display: flex;
     margin-right: 50px;
 }
@@ -317,24 +315,25 @@ input[type="submit"]:hover{
 .LogoGitea{
     text-align: center; 
     margin-top: -72px;
+    margin-left: -20px;
+    margin-right: 30px;
 }
 
 .LienGitea{
     display: flex;
     margin-bottom: -30px;
     justify-content: center;
-    
 }
 
 
 .LienYnov{
     display: flex;
     justify-content: center;
+    margin-left: 130px;
 }
 
 .premiereLigne {
     margin-top: 1%;
-    margin-left: -6%;
 }
 
 .textYnov {
