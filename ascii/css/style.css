@@ -302,6 +302,8 @@ input[type="submit"]:hover{
     width: 200px;
     height: 200px;
     display: flex;
+    margin-right: -px;
+    margin-left: -80%;
 }   
 
 #logoYnov{
@@ -315,13 +317,13 @@ input[type="submit"]:hover{
 .LogoGitea{
     text-align: center; 
     margin-top: -72px;
-    margin-left: 20px;
 }
 
 .LienGitea{
     display: flex;
     margin-bottom: -30px;
     justify-content: center;
+    
 }
 
 
@@ -332,6 +334,7 @@ input[type="submit"]:hover{
 
 .premiereLigne {
     margin-top: 1%;
+    margin-left: -6%;
 }
 
 .textYnov {
