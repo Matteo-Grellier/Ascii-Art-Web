@@ -36,3 +36,11 @@ Pour finir :
 
 ## Implementation details : algorithm
 
+## Links
+
+ - [Gitea](https://git.ytrack.learn.ynov.com/MLEGER/ascii-art-web.git)
+
+## Try the program
+
+Pour Contribuer au projet ou juste l'esseyer vous pouvez retrouver la dernière version en date dans les releases.
+
