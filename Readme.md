@@ -123,3 +123,10 @@ Fin
 
 Les différents fichiers sont commentés afin d'améliorer la compréhension (donc pour plus de détails sur la partie serveur, regardez les fichiers).
 
+## Links
+
+ - [Gitea](https://git.ytrack.learn.ynov.com/MLEGER/ascii-art-web.git)
+
+## Try the program
+
+Pour Contribuer au projet ou juste l'esseyer vous pouvez retrouver la dernière version en date dans les releases.
