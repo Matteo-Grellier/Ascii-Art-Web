@@ -129,4 +129,4 @@ Les différents fichiers sont commentés afin d'améliorer la compréhension (do
 
 ## Try the program
 
-Pour Contribuer au projet ou juste l'esseyer vous pouvez retrouver la dernière version en date dans les releases.
+Pour Contribuer au projet ou juste l'esseyer vous pouvez retrouver la dernière version en date dans l'onglet releases.
