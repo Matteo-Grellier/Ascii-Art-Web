@@ -9,13 +9,13 @@ Ce site est aussi capable de gérer les erreurs éventuelles liées à :
 - une erreur de lecture des fichiers.
 
 ## Authors 
-- **Mathéo LEGER** : 
+- **Mathéo LEGER** :  
                         - la création du serveur  
                         - la liaison entre programme Ascii-Art et l'affichage sur le site web.  
                         - CSS  
                         - HTML  
 
-- **Matteo GRELLIER** : 
+- **Matteo GRELLIER** :  
                         - CSS  
                         - HTML  
                         - gestion de git pour le transfert de fichier.  
