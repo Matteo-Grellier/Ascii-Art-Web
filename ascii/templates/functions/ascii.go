@@ -8,9 +8,6 @@ import (
 
 func Ascii(textToConvert string, banner string) string {
 
-	//if len(os.Args)-1 == 2 {
-
-	// textToConvert := os.Args[1]
 	var asciiLines []string
 	var finalStr string
 	var buffStr string
@@ -37,11 +34,6 @@ func Ascii(textToConvert string, banner string) string {
 
 		finalStr = finalStr + buffStr
 	}
-
-	//} else {
-
-	// 	fmt.Println("Sorry, but there is not the good number of argument")
-	// }
 
 	return finalStr
 }

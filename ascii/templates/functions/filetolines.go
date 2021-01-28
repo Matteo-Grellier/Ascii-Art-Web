@@ -19,7 +19,7 @@ func FilesToLines(filePath string) (asciiArtLines []string) {
 	for scanner.Scan() {
 		asciiArtLines = append(asciiArtLines, scanner.Text())
 	}
-	//attention ici il faut vérifier si c'est bon (car la c'est pas fait)
+
 	err = scanner.Err()
 	if err != nil {
 		return nil

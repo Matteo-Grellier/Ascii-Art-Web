@@ -1,10 +1,7 @@
 package functions
 
-//var t *template.Template
-
+// PrintAscii permet l'écriture (sur une seule ligne) de la chaine de caractère entrée par l'utilisateur.
 func PrintAscii(eachTextSplit string, asciiLines []string) string {
-
-	//var w http.ResponseWriter
 
 	characterLine := 0
 
@@ -17,12 +14,11 @@ func PrintAscii(eachTextSplit string, asciiLines []string) string {
 		for _, char := range eachTextSplit { //Boucle regardant chaque string du tableau de string
 
 			characterLine = (int(char) - 32) * 9             //cherche la première ligne du caractère correspondant
-			str = str + asciiLines[characterLine+everyLines] // concaténation de la ligne des différents caracères
+			str = str + asciiLines[characterLine+everyLines] // concaténation de la ligne des différents caractères
 
 		}
-		// fmt.Println(str)
 
-		finalStr = finalStr + str + `<br>`
+		finalStr = finalStr + str + `<br>` //Concaténation dans une seule string (retour à la ligne possible grâce à la balise "<br>"
 	}
 
 	return finalStr

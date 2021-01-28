@@ -36,11 +36,11 @@ func server(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	formSelect := req.Form.Get("select")
-	formText := req.Form.Get("text")
+	formSelect := req.Form.Get("select") //récupère l'information du formulaire (au nom "select")
+	formText := req.Form.Get("text")     //récupère l'information du formulaire (au nom "text")
 	var finalStr string
 
-	if req.URL.Path != "/" {
+	if req.URL.Path != "/" { //Vérification pour éviter que le programme "ascii.go" se lance dès le début (évite une erreur 500)
 		finalStr = asciifunc.Ascii(formText, formSelect)
 	}
 
@@ -50,38 +50,39 @@ func server(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	t.Execute(w, template.HTML(finalStr))
-
-	//fmt.Fprintf(w, "Test Fprintf")
+	t.Execute(w, template.HTML(finalStr)) // "t.Execute" va écrire une réponse à la requête et "template.HTML" va écrire du texte sous forme HTML à l'emplacement "{{.}}" sur la page HTML.
 
 }
 
-func error(w http.ResponseWriter, r *http.Request, status int) {
-	w.WriteHeader(status)
-	if status == http.StatusNotFound {
-		//fmt.Fprint(w, "Error 404 : Page not found")
-		tErr.Execute(w, template.HTML(`<h1>Error 404 : Page not found...<h1>`))
+func error(w http.ResponseWriter, r *http.Request, errorCode int) {
+	w.WriteHeader(errorCode)
+
+	//Si le code erreur est 404 (404 = http.StatusNotFound)
+	if errorCode == http.StatusNotFound {
+		tErr.Execute(w, template.HTML(`<h1>Error 404 : Page not found...<h1>`)) //(voir ligne 53 pour explication)
 	}
 
-	if status == 400 {
-		tErr.Execute(w, template.HTML(`<h1>Error 400 : Bad Request...<h1>`))
+	//Si le code erreur est 400
+	if errorCode == 400 {
+		tErr.Execute(w, template.HTML(`<h1>Error 400 : Bad Request...<h1>`)) //(voir ligne 53 pour explication)
 	}
 
-	if status == 500 {
-		tErr.Execute(w, template.HTML(`<h1>Error 500 : Internal Server Error...<h1>`))
+	//Si le code erreur est 500
+	if errorCode == 500 {
+		tErr.Execute(w, template.HTML(`<h1>Error 500 : Internal Server Error...<h1>`)) //(voir ligne 53 pour explication)
 	}
 }
 
 func main() {
-	t = template.Must(template.ParseFiles("./index.html"))
-	tErr = template.Must(template.New("test").Parse("{{.}}"))
+	t = template.Must(template.ParseFiles("./index.html"))        // Récupère la page "index.html" comme page du template
+	tErr = template.Must(template.New("forError").Parse("{{.}}")) // Créer une page du template dans lequel il y a "{{.}}"
 
-	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("../css")))) // récupère tous les fichiers "externe" dans "static" (comme le style.css)
-	http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir("../images"))))
+	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("../css"))))          // récupère tous les fichiers "externe" dans "css"
+	http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir("../images")))) // récupère tous les fichiers "externe" dans "images"
 
-	http.HandleFunc("/", server) // "/" pour dire qu'on est dans ce chemin et server car cest la fonction
+	http.HandleFunc("/", server) // Permet d'utiliser une fonction pour répondre à la requête HTTP (fonction "server") dans le chemin "/"
 
-	if err := http.ListenAndServe(":50000", nil); err != nil {
+	if err := http.ListenAndServe(":50000", nil); err != nil { // "ListenAndServe" écoute les requêtes HTTP (ici sur le port 50000)
 		log.Fatal("ListenAndServe: ", err)
 	}
 }

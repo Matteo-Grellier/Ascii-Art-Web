@@ -1,4 +1,5 @@
 # Ascii-Art-Web
+
 ## Description
 Ce projet a pour but de réutiliser notre ancien projet Ascii-art et réussir à l'incorporer dans une page web. 
 
@@ -7,18 +8,19 @@ L'utilisateur peut entrer un texte et choisir une police pour ensuite que le ser
 Ce site est aussi capable de gérer les erreurs éventuelles liées à : 
 - un port différent de celui utilisé pour lancer le serveur,
 - une erreur de lecture des fichiers.
+- une page non trouvée.
 
 ## Authors 
 - **Mathéo LEGER** :  
-                        - la création du serveur  
-                        - la liaison entre programme Ascii-Art et l'affichage sur le site web.  
-                        - CSS  
-                        - HTML  
+    - la création du serveur  
+    - la liaison entre programme Ascii-Art et l'affichage sur le site web.  
+    - CSS  
+    - HTML  
 
 - **Matteo GRELLIER** :  
-                        - CSS  
-                        - HTML  
-                        - gestion de git pour le transfert de fichier.  
+    - CSS  
+    - HTML  
+    - gestion de git pour le transfert de fichier.  
 
 ## Usage : How to run
 Pour lancer le serveur et utiliser la page web il faut :

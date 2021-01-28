@@ -234,14 +234,14 @@ footer a {
 }
 
 
-.LienGitea{
+.lienGitea{
     display: flex;
     margin-bottom: -30px;
     justify-content: center;
 }
 
 
-.LienYnov{
+.lienYnov{
     display: flex;
     justify-content: center;
     margin-left: 130px;
