@@ -20,12 +20,12 @@ func server(w http.ResponseWriter, req *http.Request) {
 	}
 
 	//Gestion des erreurs de chemin (avec Error 404)
-	if req.URL.Path != "/" && req.URL.Path != "/ascii-art" {
+	if req.URL.Path != "/" && req.URL.Path != "/ascii-art" { //("req.URL.Path" est la valeur du chemin dans le serveur)
 		error(w, req, http.StatusNotFound)
 		return
 	}
 	//Gestion des erreurs de Request (avec Error 400)
-	if req.Method != "POST" && req.URL.Path == "/ascii-art" {
+	if req.Method != "POST" && req.URL.Path == "/ascii-art" { //("req.Method" est la valeur de la méthode)
 		error(w, req, 400)
 		return
 	} else if req.Method != "GET" && req.URL.Path == "/" {
